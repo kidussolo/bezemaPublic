@@ -1,7 +1,9 @@
 import React, { Component } from "react";
+import Proptypes from "prop-types";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import classnames from "classnames";
+import { addPost } from "../../actions/postAction";
 
 class Newpost extends Component {
   // Component state
@@ -89,10 +91,10 @@ class Newpost extends Component {
 }
 
 // Map any property in the component to proptypes and defines its datatype and wheter it is required
-Login.propTypes = {
-  loginUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+Newpost.propTypes = {
+  addPost: Proptypes.func.isRequired,
+  auth: Proptypes.object.isRequired,
+  errors: Proptypes.object.isRequired
 };
 
 // Get state to our component props
@@ -101,4 +103,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect()(Newpost);
+export default connect(mapStateToProps, { addPost })(Newpost);

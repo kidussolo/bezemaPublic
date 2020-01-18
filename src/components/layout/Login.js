@@ -36,6 +36,12 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors) {
+      this.setState({ errors: newProps.errors });
+    }
+  }
+
   render() {
     const { errors } = this.state;
     return (
