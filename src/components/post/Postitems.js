@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 import { addPost } from "../../actions/postAction";
 
-class Newpost extends Component {
+class Postitems extends Component {
   // Component state
   constructor() {
     super();
@@ -20,6 +20,11 @@ class Newpost extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors) {
+      this.setState({ errors: newProps.errors });
+    }
+  }
   onSubmit(e) {
     e.preventDefault();
 
@@ -28,6 +33,8 @@ class Newpost extends Component {
       description: this.state.description,
       image: this.state.image
     };
+    this.props.addPost(user);
+    this.setState({ text: "" });
     console.log(user);
   }
 
@@ -91,7 +98,7 @@ class Newpost extends Component {
 }
 
 // Map any property in the component to proptypes and defines its datatype and wheter it is required
-Newpost.propTypes = {
+Postitems.propTypes = {
   addPost: Proptypes.func.isRequired,
   auth: Proptypes.object.isRequired,
   errors: Proptypes.object.isRequired
@@ -103,4 +110,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addPost })(Newpost);
+export default connect(mapStateToProps, { addPost })(Postitems);
