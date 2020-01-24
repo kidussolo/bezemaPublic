@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   background-color: whitesmoke;
-  /*min-height: 100vh;*/
+  min-height: 100vh;
   max-height: 1000px;
   box-sizing: border-box;
 }
@@ -34,7 +34,7 @@
   padding-top: 50px;
 }
 footer {
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;

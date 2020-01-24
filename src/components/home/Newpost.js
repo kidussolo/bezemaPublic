@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import classnames from "classnames";
 import { addPost } from "../../actions/postAction";
 
-class Postitems extends Component {
+class Newposts extends Component {
   // Component state
   constructor() {
     super();
@@ -98,7 +98,7 @@ class Postitems extends Component {
 }
 
 // Map any property in the component to proptypes and defines its datatype and wheter it is required
-Postitems.propTypes = {
+Newposts.propTypes = {
   addPost: Proptypes.func.isRequired,
   auth: Proptypes.object.isRequired,
   errors: Proptypes.object.isRequired
@@ -110,4 +110,4 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
-export default connect(mapStateToProps, { addPost })(Postitems);
+export default connect(mapStateToProps, { addPost })(Newposts);

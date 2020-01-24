@@ -100,12 +100,14 @@ class Login extends Component {
               Remember me
             </label>
           </div>
-          <button
-            type="submit"
-            className="btn btn-primary  btn-block float-right"
-          >
-            Login
-          </button>
+          <Link to="/main">
+            <button
+              type="submit"
+              className="btn btn-primary  btn-block float-right"
+            >
+              Login
+            </button>
+          </Link>
         </form>
         <div id="form-footer">
           <Link to="/reset"> Forgot password ?</Link>

@@ -9,9 +9,9 @@ import "./App.css";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import Login from "./components/layout/Login";
-import Main from "./components/posts/Main";
+import Main from "./components/home/Main";
 import Newpost from "./components/home/Newpost";
-import Posts from "./components/home/Posts";
+import Posts from "./components/post/Posts";
 
 class App extends Component {
   render() {
