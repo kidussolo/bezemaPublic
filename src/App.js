@@ -11,6 +11,7 @@ import Footer from "./components/layout/Footer";
 import Login from "./components/layout/Login";
 import Main from "./components/posts/Main";
 import Newpost from "./components/home/Newpost";
+import Posts from "./components/home/Posts";
 
 class App extends Component {
   render() {
@@ -23,6 +24,7 @@ class App extends Component {
               <Route exact path="/" component={Login} />
               <Route exact path="/main" component={Main} />
               <Route exact path="/Newpost" component={Newpost} />
+              <Route exact path="/Posts" component={Posts} />
             </div>
             <Footer />
           </div>

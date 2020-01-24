@@ -1,10 +1,10 @@
-body {
-  margin-bottom: 100px !important;
-}
-
 .App {
+  margin: 0;
+  padding: 0;
   background-color: whitesmoke;
-  height: 667px;
+  /*min-height: 100vh;*/
+  max-height: 1000px;
+  box-sizing: border-box;
 }
 
 #welcome {
@@ -14,7 +14,7 @@ body {
 #Newpost {
   border: 1px solid #ddd;
   background: #ffffff;
-  height: 500px;
+  height: auto;
   margin-top: 40px;
   padding: 50px;
   width: 600px;
@@ -23,7 +23,7 @@ body {
 #login {
   border: 1px solid #ddd;
   background: #ffffff;
-  height: 400px;
+  height: auto;
   margin-top: 80px;
   padding: 50px;
   width: 400px;
@@ -33,31 +33,8 @@ body {
   text-align: center;
   padding-top: 50px;
 }
-
-.dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.card-form {
-  opacity: 0.9;
-}
-
-.latest-profiles-img {
-  width: 40px;
-  height: 40px;
-}
-
-.form-control::placeholder {
-  color: #bbb !important;
-}
-
 footer {
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   width: 100%;
