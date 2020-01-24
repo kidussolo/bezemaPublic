@@ -76,7 +76,7 @@ class PostItem extends Component {
         <div className="card-body">
           <img
             className="card-img-bottom "
-            src="photo1130.jpg"
+            src="logo192.png"
             alt=""
             height="300"
           />
