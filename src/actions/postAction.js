@@ -83,13 +83,19 @@ export const deletePost = id => dispatch => {
       })
     );
 };
-// Set loading state
-export const setPostLoading = () => {
-  return {
-    type: POST_LOADING
-  };
-};
 
+// Edit Post
+export const editPost = newPostData => dispatch => {
+  axios
+    .put("api/posts", newPostData)
+    .then(res => dispatch())
+    .catch(err =>
+      dispatch({
+        type: GET_ERRORS,
+        payload: err.response.data
+      })
+    );
+};
 // Add Like
 export const addLike = id => dispatch => {
   axios
@@ -103,6 +109,12 @@ export const addLike = id => dispatch => {
     );
 };
 
+// Set loading state
+export const setPostLoading = () => {
+  return {
+    type: POST_LOADING
+  };
+};
 // Clear errors
 export const clearErrors = () => {
   return {
